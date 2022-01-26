@@ -1,14 +1,16 @@
-print("Este programa recibe tres números y devuelve la suma.")
-total = 0
- 
+print("Este programa recibe siete números y devuelve la suma.")
+total=0
+negatiu=0
+positiu=0
+Zero=0
 for i in range(7):
-    x = int(input("Introduce un número: "))
+    x = float(input("Introduce un número: "))
+    if x > 0:
+        positiu+=1
+    elif x < 0:
+        negatiu+=1
+    else:
+        Zero+=1
     total = total + x
 print("El total es:", total)
-
-if total > 0:
-    print ("El total es: Positiu")
-elif total < 0:
-    print ("El total es: Negatiu")
-else:
-    print ("El total es: 0")
+print("Hi ha", positiu," positius, hi ha", negatiu," negatius hi ha", Zero, "zeros")
